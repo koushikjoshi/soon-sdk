@@ -1,11 +1,11 @@
 import { Keypair, PublicKey, Transaction, SystemProgram } from '@solana/web3.js';
-
+import bs58 from 'bs58';
 class Transactions {
   static async sendTransaction(senderPrivateKey, receiverPublicKey, amount, client) {
     const connection = client.getConnection();
 
     // Decode sender's private key
-    const senderKeypair = Keypair.fromSecretKey(Buffer.from(senderPrivateKey, 'base64'));
+    const senderKeypair = Keypair.fromSecretKey(bs58.decode(senderPrivateKey));
     const receiverPubKey = new PublicKey(receiverPublicKey);
 
     // Create transaction

@@ -2,7 +2,7 @@ import { Connection } from '@solana/web3.js';
 
 class SOONClient {
   constructor() {
-    this.connection = new Connection('https://rpc.testnet.soo.network/rpc', 'confirmed');
+    this.connection = new Connection('https://rpc.devnet.soo.network/rpc', 'confirmed');
   }
 
   async getLatestBlock() {
