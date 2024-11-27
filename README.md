@@ -32,17 +32,27 @@ import { SOONClient, generateKeypair, getBalance, Transactions, Contracts } from
 const client = new SOONClient();
 ```
 
-### Create a Client
-
-```bash
-const client = new SOONClient();
-```
-
 ### Generate a New Wallet Keypair
 
 ```bash
 const wallet = generateKeypair();
 console.log('Generated Wallet:', wallet);
+```
+
+### Generate Contract Details
+
+```bash
+const contractDetails = await getContractDetails('YourContractAddress');
+console.log('Contract Details:', contractDetails);
+
+```
+
+### Generate Token Accounts by Owner
+
+```bash
+const tokenAccounts = await getTokenAccountsByOwner('YourWalletAddress', 'YourTokenProgramId');
+console.log('Token Accounts:', tokenAccounts);
+
 ```
 
 ### Get Balance of an Account

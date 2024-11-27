@@ -13,3 +13,17 @@ export const getBalance = async (publicKey, client) => {
   const balance = await client.getConnection().getBalance(pubKey);
   return balance / 1e9; // Convert lamports to SOL
 };
+
+// Search for associated token accounts for a given wallet address
+export const getTokenAccountsByOwner = async (address, programId) => {
+  const publicKey = new PublicKey(address);
+  const tokenAccounts = await this.connection.getParsedTokenAccountsByOwner(publicKey, { programId });
+  return tokenAccounts;
+}
+
+// Get contract details by address
+export const getContractDetails = async (contractAddress) => {
+  const publicKey = new PublicKey(contractAddress);
+  const accountInfo = await this.connection.getAccountInfo(publicKey);
+  return accountInfo;
+}
