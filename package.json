@@ -1,6 +1,6 @@
 {
   "name": "solana-soon-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A lightweight JavaScript SDK for interacting with the SOON network on Solana. This package provides a set of tools to facilitate blockchain transactions, account management, program interactions, and balance queries using the Solana Web3 API. With features like wallet keypair generation, balance checking, transaction sending, and contract program calls, it simplifies the integration of Solana-based functionality into your JavaScript/TypeScript applications.",
   "main": "index.js",
   "type": "module",
